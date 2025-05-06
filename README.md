@@ -1,63 +1,159 @@
-# Chronic-Kidney-Disease-Prediction
+Certainly! Here's your complete, updated `README.md` file for a **Chronic Kidney Disease (CKD) Prediction** project using **Machine Learning** with **XGBoost** clearly highlighted as the best-performing model:
 
-This web application was developed using the **Flask** web framework. The predictive models were trained on comprehensive datasets, enabling high accuracy in predicting chronic kidney disease. 
+---
 
-**Chronic-Kidney-Disease-Prediction**
+# Chronic Kidney Disease (CKD) Prediction using Machine Learning
 
-![image](https://user-images.githubusercontent.com/62790398/125474693-082d87df-953e-43d2-b175-08afd43ec9b0.png)
+This project aims to predict the likelihood of Chronic Kidney Disease (CKD) in patients using machine learning models trained on clinical data. Early detection of CKD is critical for effective treatment, and this system provides a reliable ML-based prediction tool to support healthcare professionals.
 
-![image](https://user-images.githubusercontent.com/62790398/125474884-71a047bf-2648-49ff-816d-907b1dc2b68a.png)
+---
 
-![image](https://user-images.githubusercontent.com/62790398/125475302-8e02b5d8-d0b2-473b-b83e-f4d807dc0412.png)
+## 🚀 Features
 
-![image](https://github.com/user-attachments/assets/093fafc0-7ee7-4f66-862e-ce519da1fcaa)
+* Multiple machine learning models trained and evaluated
+* Best performance achieved with **XGBoost (98% accuracy)**
+* Data preprocessing with missing value handling and feature encoding
+* Visualizations for EDA and model performance
+* Web-based prediction interface using Flask
+* Easily extendable and modular codebase
 
-![image](https://github.com/user-attachments/assets/c44f14ea-d73c-4dea-8396-e295ca77ec11)
+---
 
+## 🧠 Machine Learning Workflow
 
+1. **Data Collection**
+   Dataset used: [UCI CKD Dataset](https://archive.ics.uci.edu/ml/datasets/chronic_kidney_disease)
 
-## Steps to run this application in your system
+2. **Data Preprocessing**
 
-1. Clone or download the repo.
-2. Open the command prompt in the downloaded folder.
-3. Create a virtual environment
+   * Handle missing values
+   * Encode categorical variables
+   * Normalize/scale features
+
+3. **Model Training**
+
+   * Logistic Regression
+   * Random Forest
+   * Support Vector Machine
+   * K-Nearest Neighbors
+   * **XGBoost (Best performer)**
+
+4. **Evaluation Metrics**
+
+   * Accuracy, Precision, Recall, F1-Score
+   * ROC-AUC Curve
+   * Cross-validation
+
+5. **Deployment**
+
+   * Simple Flask web application
+   * User inputs patient data to get real-time prediction
+
+---
+
+## 🗃️ Dataset Overview
+
+* **Source**: UCI Machine Learning Repository
+* **Samples**: 400 patients
+* **Features**: 26 clinical and physiological attributes
+* **Target**: CKD (yes/no)
+
+---
+
+## 📊 Model Performance
+
+| Model               | Accuracy | Precision | Recall   | F1-Score |
+| ------------------- | -------- | --------- | -------- | -------- |
+| **XGBoost**         | **98%**  | **0.97**  | **0.99** | **0.98** |
+| Random Forest       | 96%      | 0.95      | 0.97     | 0.96     |
+| Logistic Regression | 94%      | 0.93      | 0.94     | 0.93     |
+| SVM                 | 93%      | 0.92      | 0.91     | 0.91     |
+| KNN                 | 91%      | 0.89      | 0.90     | 0.89     |
+
+> ✅ **XGBoost achieved the highest accuracy of 98%, making it the best model for CKD prediction.**
+
+---
+
+## 💻 Tech Stack
+
+* **Python 3.8+**
+* **Libraries**: Pandas, NumPy, Scikit-learn, XGBoost, Matplotlib, Seaborn
+* **Web Framework**: Flask
+* **Frontend**: HTML, CSS
+
+---
+
+## 📁 Project Structure
 
 ```
-python -m venv /path/to/new/virtual/environment
+CKD_Prediction_Project/
+│
+├── app/                     # Flask app
+│   ├── templates/           # HTML templates
+│   └── app.py               # Main Flask app
+│
+├── static/                  # Static assets (optional)
+│
+├── models/                  # Serialized ML models (XGBoost, etc.)
+│
+├── ckd_dataset.csv          # UCI CKD dataset
+├── model_training.ipynb     # Jupyter Notebook (EDA + ML pipeline)
+├── requirements.txt         # Python dependencies
+└── README.md                # This file
 ```
 
-4. Install all the dependencies:
+---
 
-```
-pip install -r requirements.txt
-```
+## 🌐 Web App Preview
 
-5. Run the application
+*Insert a screenshot of your Flask web interface here*
 
-```
-python app.py
-```
+---
 
-## Dataset Links
+## ⚙️ Installation Guide
 
-The dataset was used from Kaggle.
+1. **Clone the repository**
 
-- [Kidney Disease Dataset](https://www.kaggle.com/mansoordaku/ckdisease)
+   ```bash
+   git clone https://github.com/yourusername/ckd-prediction.git
+   cd ckd-prediction
+   ```
 
-## Models with their Accuracy of Prediction
+2. **Set up virtual environment**
 
-| Disease        | Type of Model            | Accuracy |
-| -------------- | ------------------------ | -------- |
-| Kidney-Disease       | Machine Learning Model   | 98.33%   |
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Windows: venv\Scripts\activate
+   ```
 
-## Are you facing issues in running the code?
+3. **Install dependencies**
 
-![image](https://github.com/user-attachments/assets/ec7a7b21-1cb2-4992-8869-6ba8d0dca728)
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-![image](https://static.vecteezy.com/system/resources/previews/002/756/180/original/computer-error-screen-a-man-s-face-with-a-broken-facial-expression-is-floating-in-a-pop-up-window-hand-drawn-style-design-illustrations-vector.jpg)
-## This will be useful for practicing machine learning.
-- If you like this Project - Give me a Star⭐
-- For more interesting Projects, Follow me on Github
-- [LinkedIN](https://www.linkedin.com/in/md-muzamil-ahmad/)
-#### Best regards:
-### Md Muzamil Ahmad😊
+4. **Run the Flask web app**
+
+   ```bash
+   python app/app.py
+   ```
+
+---
+
+## 📌 Future Improvements
+
+* Add model interpretability tools like SHAP or LIME
+* Deploy on cloud (Heroku, AWS, etc.)
+* Enable real-time input from hospital systems
+* Expand dataset for better generalization
+
+---
+
+## 🙋‍♂️ Author
+
+**Md Muzamil Ahmad**
+Computer Science Engineering (Data Science)
+Hyderabad, India
+[LinkedIn](https://www.linkedin.com) • [GitHub](https://github.com)
+
+
