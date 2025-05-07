@@ -1,7 +1,3 @@
-Certainly! Here's your complete, updated `README.md` file for a **Chronic Kidney Disease (CKD) Prediction** project using **Machine Learning** with **XGBoost** clearly highlighted as the best-performing model:
-
----
-
 # Chronic Kidney Disease (CKD) Prediction using Machine Learning
 
 This project aims to predict the likelihood of Chronic Kidney Disease (CKD) in patients using machine learning models trained on clinical data. Early detection of CKD is critical for effective treatment, and this system provides a reliable ML-based prediction tool to support healthcare professionals.
@@ -22,7 +18,7 @@ This project aims to predict the likelihood of Chronic Kidney Disease (CKD) in p
 ## 🧠 Machine Learning Workflow
 
 1. **Data Collection**
-   Dataset used: [UCI CKD Dataset](https://archive.ics.uci.edu/ml/datasets/chronic_kidney_disease)
+   Dataset used: [CKD Dataset](https://github.com/muzamilmujju/Chronic-Kidney-Disease-Prediction/blob/main/Python%20Jupyter%20Notebook/kidney_disease.csv)
 
 2. **Data Preprocessing**
 
@@ -81,28 +77,6 @@ This project aims to predict the likelihood of Chronic Kidney Disease (CKD) in p
 * **Web Framework**: Flask
 * **Frontend**: HTML, CSS
 
----
-
-## 📁 Project Structure
-
-```
-CKD_Prediction_Project/
-│
-├── app/                     # Flask app
-│   ├── templates/           # HTML templates
-│   └── app.py               # Main Flask app
-│
-├── static/                  # Static assets (optional)
-│
-├── models/                  # Serialized ML models (XGBoost, etc.)
-│
-├── ckd_dataset.csv          # UCI CKD dataset
-├── model_training.ipynb     # Jupyter Notebook (EDA + ML pipeline)
-├── requirements.txt         # Python dependencies
-└── README.md                # This file
-```
-
----
 
 ## 🌐 Web App Preview
 
@@ -152,8 +126,6 @@ CKD_Prediction_Project/
 ## 🙋‍♂️ Author
 
 **Md Muzamil Ahmad**
-Computer Science Engineering (Data Science)
-Hyderabad, India
 [LinkedIn](https://www.linkedin.com) • [GitHub](https://github.com)
 
 
