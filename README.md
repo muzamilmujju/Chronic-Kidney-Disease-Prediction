@@ -53,7 +53,7 @@ Here are some screenshots of the application in action:
 
 ### 1. Home Page
 
-![Home Page](Screenshots(26).png)
+![Home Page](Screenshots%20(26).png)
 
 ### 2. Kidney Disease Input Form
 
