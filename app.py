@@ -1,10 +1,8 @@
-from flask import Flask, render_template, request, flash, redirect
+from flask import Flask, render_template, request
 import pickle
 import numpy as np
 from PIL import Image
 from tensorflow.keras.models import load_model
-
-
 
 app = Flask(__name__)
 
@@ -62,20 +60,38 @@ def malariaPage():
 def pneumoniaPage():
     return render_template('pneumonia.html')
 
-@app.route("/predict", methods = ['POST', 'GET'])
+@app.route("/predict", methods=['GET', 'POST'])
 def predictPage():
-    try:
-        if request.method == 'POST':
+    if request.method == 'POST':
+        try:
+            # Convert form data to float list
             to_predict_dict = request.form.to_dict()
-            to_predict_list = list(map(float, list(to_predict_dict.values())))
+            to_predict_list = list(map(float, to_predict_dict.values()))
+
+            # Predict using the appropriate model
             pred = predict(to_predict_list, to_predict_dict)
-    except:
-        message = "Please enter valid Data"
-        return render_template("home.html", message = message)
 
-    return render_template('predict.html', pred = pred)
+            # Debug print to terminal
+            print("Model Prediction Output:", pred)
 
-@app.route("/malariapredict", methods = ['POST', 'GET'])
+            # Handle prediction output for kidney disease (adjust as needed)
+            if str(pred).lower() in ['1', 'true', 'yes', 'present']:
+                result = "Kidney Disease Detected"
+            else:
+                result = "No Kidney Disease Detected"
+
+            # Render kidney.html with prediction result
+            return render_template('kidney.html', prediction=result)
+
+        except Exception as e:
+            # Show error message on the kidney page
+            message = "Please enter valid data. Error: " + str(e)
+            return render_template('kidney.html', message=message)
+
+    # GET request just shows the form
+    return render_template('kidney.html')
+
+@app.route("/malariapredict", methods=['POST', 'GET'])
 def malariapredictPage():
     if request.method == 'POST':
         try:
@@ -87,12 +103,13 @@ def malariapredictPage():
                 img = img.astype(np.float64)
                 model = load_model("models/malaria.h5")
                 pred = np.argmax(model.predict(img)[0])
+                return render_template('malaria_predict.html', pred=pred)
         except:
             message = "Please upload an Image"
-            return render_template('malaria.html', message = message)
-    return render_template('malaria_predict.html', pred = pred)
+            return render_template('malaria.html', message=message)
+    return render_template('malaria.html')
 
-@app.route("/pneumoniapredict", methods = ['POST', 'GET'])
+@app.route("/pneumoniapredict", methods=['POST', 'GET'])
 def pneumoniapredictPage():
     if request.method == 'POST':
         try:
@@ -104,10 +121,11 @@ def pneumoniapredictPage():
                 img = img / 255.0
                 model = load_model("models/pneumonia.h5")
                 pred = np.argmax(model.predict(img)[0])
+                return render_template('pneumonia_predict.html', pred=pred)
         except:
             message = "Please upload an Image"
-            return render_template('pneumonia.html', message = message)
-    return render_template('pneumonia_predict.html', pred = pred)
+            return render_template('pneumonia.html', message=message)
+    return render_template('pneumonia.html')
 
 if __name__ == '__main__':
-	app.run(debug = True)
+    app.run(debug=True)
