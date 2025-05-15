@@ -47,14 +47,28 @@ This project aims to predict the likelihood of Chronic Kidney Disease (CKD) in p
 
 ---
 
-## 🗃️ Dataset Overview
+## 📷 Executed Screenshots
 
-* **Source**: UCI Machine Learning Repository
-* **Samples**: 400 patients
-* **Features**: 26 clinical and physiological attributes
-* **Target**: CKD (yes/no)
+Here are some screenshots of the application in action:
+
+### 1. Home Page
+
+![Home Page](screenshots/home_page.png)
+
+### 2. Kidney Disease Input Form
+
+![Input Form](screenshots/kidney_input_form.png)
+
+### 3. Prediction Result - Disease Detected
+
+![Disease Detected](screenshots/kidney_disease_detected.png)
+
+### 4. Prediction Result - No Disease
+
+![No Disease](screenshots/kidney_no_disease.png)
 
 ---
+
 
 ## 📊 Model Performance
 
@@ -77,12 +91,8 @@ This project aims to predict the likelihood of Chronic Kidney Disease (CKD) in p
 * **Web Framework**: Flask
 * **Frontend**: HTML, CSS
 
-
-## 🌐 Web App Preview
-
-*Insert a screenshot of your Flask web interface here*
-
 ---
+
 
 ## ⚙️ Installation Guide
 
@@ -91,41 +101,3 @@ This project aims to predict the likelihood of Chronic Kidney Disease (CKD) in p
    ```bash
    git clone https://github.com/yourusername/ckd-prediction.git
    cd ckd-prediction
-   ```
-
-2. **Set up virtual environment**
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run the Flask web app**
-
-   ```bash
-   python app/app.py
-   ```
-
----
-
-## 📌 Future Improvements
-
-* Add model interpretability tools like SHAP or LIME
-* Deploy on cloud (Heroku, AWS, etc.)
-* Enable real-time input from hospital systems
-* Expand dataset for better generalization
-
----
-
-## 🙋‍♂️ Author
-
-**Md Muzamil Ahmad**
-[LinkedIn](https://www.linkedin.com) • [GitHub](https://github.com)
-
-
