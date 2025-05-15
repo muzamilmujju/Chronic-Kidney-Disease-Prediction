@@ -95,68 +95,71 @@ Here are some screenshots of the application in action:
 ---
 
 
-
 ## ⚙️ Installation Guide
 
-Follow the steps below to set up and run this project on your local machine.
+Follow these steps to set up and run this project on your local machine.
 
 ---
 
 ### 📁 Step 1: Clone the Repository
 
-Clone the project to your local system using Git.
+Clone the project repository to your local system using Git:
 
+```bash
 git clone https://github.com/yourusername/ckd-prediction.git
 cd ckd-prediction
-Replace yourusername with your actual GitHub username.
+```
 
-### 🧪 Step 2: Create and Activate a Virtual Environment (Recommended)
-Using a virtual environment prevents dependency conflicts.
+> Replace `yourusername` with your actual GitHub username.
 
-On Windows:
-bash
-Copy
-Edit
+---
+
+### ⚙️ Steps 2–5: Setup, Dependencies, Dataset & Run
+
+Follow these combined steps to set up the virtual environment, install dependencies, prepare the dataset, and run the project.
+
+#### ✅ On **Windows**:
+
+```bash
+:: Step 2: Create and activate a virtual environment
 python -m venv venv
 venv\Scripts\activate
-On macOS/Linux:
-bash
-Copy
-Edit
+
+:: Step 3: Install dependencies
+pip install -r requirements.txt
+
+:: (If requirements.txt is missing)
+:: pip install numpy pandas scikit-learn matplotlib seaborn jupyter
+
+:: Step 4: Make sure ckd.csv is in the project root directory
+
+:: Step 5: Run the notebook or script
+jupyter notebook
+:: Then open ckd_prediction.ipynb in your browser
+
+:: Or run directly as Python script
+python main.py
+```
+
+#### ✅ On **macOS/Linux**:
+
+```bash
+# Step 2: Create and activate a virtual environment
 python3 -m venv venv
 source venv/bin/activate
-### 📦 Step 3: Install Required Dependencies
-Install the required Python packages.
 
-Option 1: Using requirements.txt
-If requirements.txt is present:
-
-bash
-Copy
-Edit
+# Step 3: Install dependencies
 pip install -r requirements.txt
-Option 2: Manual Installation
-If requirements.txt is missing, install manually:
 
-bash
-Copy
-Edit
-pip install numpy pandas scikit-learn matplotlib seaborn jupyter
-### 🧾 Step 4: Prepare the Dataset
-Ensure you have the dataset file named ckd.csv in the root folder.
+# (If requirements.txt is missing)
+# pip install numpy pandas scikit-learn matplotlib seaborn jupyter
 
-If you don’t have it, download it from a reliable source like Kaggle CKD Dataset and place it inside your project directory.
+# Step 4: Make sure ckd.csv is in the project root directory
 
-### ▶️ Step 5: Run the Project
-Option 1: If Using a Jupyter Notebook
-bash
-Copy
-Edit
+# Step 5: Run the notebook or script
 jupyter notebook
-Open ckd_prediction.ipynb in the browser and run all cells.
+# Then open ckd_prediction.ipynb in your browser
 
-Option 2: If Using a Python Script
-bash
-Copy
-Edit
+# Or run directly as Python script
 python main.py
+```
