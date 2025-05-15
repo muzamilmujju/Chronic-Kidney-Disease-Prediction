@@ -66,7 +66,7 @@ Here are some screenshots of the application in action:
 
 ### 4. Prediction Result - No Disease
 
-![No Disease](Screenshot%20(29).png)
+![No Disease](Screenshot%20(30).png)
 
 ---
 
