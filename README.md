@@ -61,12 +61,12 @@ Here are some screenshots of the application in action:
 
 ### 3. Invalid Values:
 
-![Input Form](Screenshot(28).png)
+![Input Form](Screenshot%20(28).png)
 
 
 ### 4. Prediction Result - No Disease
 
-![No Disease](Screenshot(29).png)
+![No Disease](Screenshot%20(29).png)
 
 ---
 
@@ -95,10 +95,68 @@ Here are some screenshots of the application in action:
 ---
 
 
+
 ## ⚙️ Installation Guide
 
-1. **Clone the repository**
+Follow the steps below to set up and run this project on your local machine.
 
-   ```bash
-   git clone https://github.com/yourusername/ckd-prediction.git
-   cd ckd-prediction
+---
+
+### 📁 Step 1: Clone the Repository
+
+Clone the project to your local system using Git.
+
+git clone https://github.com/yourusername/ckd-prediction.git
+cd ckd-prediction
+Replace yourusername with your actual GitHub username.
+
+### 🧪 Step 2: Create and Activate a Virtual Environment (Recommended)
+Using a virtual environment prevents dependency conflicts.
+
+On Windows:
+bash
+Copy
+Edit
+python -m venv venv
+venv\Scripts\activate
+On macOS/Linux:
+bash
+Copy
+Edit
+python3 -m venv venv
+source venv/bin/activate
+### 📦 Step 3: Install Required Dependencies
+Install the required Python packages.
+
+Option 1: Using requirements.txt
+If requirements.txt is present:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Option 2: Manual Installation
+If requirements.txt is missing, install manually:
+
+bash
+Copy
+Edit
+pip install numpy pandas scikit-learn matplotlib seaborn jupyter
+### 🧾 Step 4: Prepare the Dataset
+Ensure you have the dataset file named ckd.csv in the root folder.
+
+If you don’t have it, download it from a reliable source like Kaggle CKD Dataset and place it inside your project directory.
+
+### ▶️ Step 5: Run the Project
+Option 1: If Using a Jupyter Notebook
+bash
+Copy
+Edit
+jupyter notebook
+Open ckd_prediction.ipynb in the browser and run all cells.
+
+Option 2: If Using a Python Script
+bash
+Copy
+Edit
+python main.py
