@@ -53,20 +53,20 @@ Here are some screenshots of the application in action:
 
 ### 1. Home Page
 
-![Home Page](Screenshots%20(26).png)
+![Home Page](Screenshot%20(26).png)
 
 ### 2. Kidney Disease Input Form
 
-![Input Form](Screenshots(27).png)
+![Input Form](Screenshot%20(27).png)
 
 ### 3. Invalid Values:
 
-![Input Form](Screenshots(28).png)
+![Input Form](Screenshot(28).png)
 
 
 ### 4. Prediction Result - No Disease
 
-![No Disease](Screenshots(29).png)
+![No Disease](Screenshot(29).png)
 
 ---
 
